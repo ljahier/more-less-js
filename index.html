@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Plus ou moins</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+            <h1>Bienvenue sur le jeu du Plus ou Moins</h1>
+            <span id="showNbr"></span>
+            <div class="nbrKeyboard" id="nbrKeyboard">
+                <script>
+                    for (let i = 1; i <= 9; i++) {
+                        document.write(`<button type="button" class="numPad" value="${i}" onclick="addNbr(${i})" >${i}</button>`)
+                    }
+                </script>
+                <button type="button" class="numPad" value="0" onclick="addNbr('0')" >0</button>
+                <button type="button" class="numPad proposer" id="proposer" name="send" onclick="launch()">Proposer</button>
+                <button type="button" class="numPad recommencer" onclick="tryAgain()" id="tryAgainBtn" style="display: none;">Recommencer</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Develop with <img src="heart.png" width="15px" alt="love"> by Pierre and Lucas</p>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
