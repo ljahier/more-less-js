@@ -6,23 +6,30 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <h1>Bienvenue sur le jeu du Plus ou Moins</h1>
         <div class="container" id="container">
-            <h1>Bienvenue sur le jeu du Plus ou Moins</h1>
-            <span id="showNbr"></span>
-            <div class="nbrKeyboard" id="nbrKeyboard">
+            <div class="col-left">
                 <script>
                     for (let i = 1; i <= 9; i++) {
-                        document.write(`<button type="button" class="numPad" value="${i}" onclick="addNbr(${i})" >${i}</button>`)
+                        document.write(`<button type="button" class="padNbr" value="${i}" onclick="addNbr(${i})" >${i}</button>`)
                     }
                 </script>
-                <button type="button" class="numPad" value="0" onclick="addNbr('0')" >0</button>
-                <button type="button" class="numPad proposer" id="proposer" name="send" onclick="launch()">Proposer</button>
-                <button type="button" class="numPad recommencer" onclick="tryAgain()" id="tryAgainBtn" style="display: none;">Recommencer</button>
+                <button type="button" class="padNbr" value="0" onclick="addNbr('0')" >0</button>
+                <button type="button" class="padNbr" id="proposeBtn" onclick="launch()" style="width: 175px">Proposer</button>
+                <button type="button" class="padNbr" onclick="tryAgain()" id="tryAgainBtn" style="display: none; width: 175px">Recommencer</button>
+                <br>
+                <button type="button" class="padNbr" onclick="emptyNbr()" id="emptyNbr" style="width: 280px;">Supprimer</button>
+                
+            </div>
+            <div class="col-right">
+                <input type="text" class="showMsg" id="showMsg">
             </div>
         </div>
+
         <div class="footer">
             <p>Develop with <img src="heart.png" width="15px" alt="love"> by Pierre and Lucas</p>
         </div>
+        
         <script src="app.js"></script>
     </body>
 </html>

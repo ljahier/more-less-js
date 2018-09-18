@@ -1,39 +1,41 @@
 let result = document.getElementById('result');
 let generateNbr = Math.floor(Math.random() * 100);
-let showNbr = document.getElementById('showNbr');
-let myArray = '';
+let showMsg = document.getElementById('showMsg');
+var myMsg = '';
 let testNbr = 0;
 
-console.log(generateNbr);
-
 function addNbr(myValue) {
-    myArray += myValue;
-    showNbr.innerHTML = myArray;
-    console.log(myArray);
+    myMsg += myValue;
+    showMsg.value = myMsg;
 }
 
 function launch() {
     console.log("Launch");
-    if (myArray < generateNbr) {
-        showNbr.innerHTML = "Plus";
+    if (myMsg < generateNbr) {
+        showMsg.value = "C'est plus !"
         console.log("Plus");
     }
 
-    if (myArray > generateNbr) {
-        showNbr.innerHTML = "Moins";
+    if (myMsg > generateNbr) {
+        showMsg.value = "C'est moins !"
         console.log("Moins");
     }
     testNbr++;
-    if (myArray == generateNbr) {
-        document.getElementById('showNbr').innerHTML = 'Bien joué, en ' + testNbr + ' coups';
-        document.getElementById('tryAgainBtn').style.display = "flex";
-        document.getElementById('proposer').style.display = "none";
+    if (myMsg == generateNbr) {
+        showMsg.value = `Bien joué, en ${testNbr} coups`;
+        document.getElementById('tryAgainBtn').style.display = "";
+        document.getElementById('proposeBtn').style.display = "none";
         console.log("gg");
     }
-    myArray = '';
-    showNbr.innerHTML = myArray;
+    myMsg = '';
+    showMsg.innerHTML = myMsg;
 }
 
 function tryAgain() {
     location.reload();
+}
+
+function emptyNbr() {
+    showMsg.value = "";
+    myMsg = '';
 }
