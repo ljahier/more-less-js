@@ -10,22 +10,18 @@ function addNbr(myValue) {
 }
 
 function launch() {
-    console.log("Launch");
-    if (myMsg < generateNbr) {
-        showMsg.value = "C'est plus !"
-        console.log("Plus");
-    }
+    if (myMsg < generateNbr)
+        showMsg.value = "C'est plus !";
 
-    if (myMsg > generateNbr) {
-        showMsg.value = "C'est moins !"
-        console.log("Moins");
-    }
+    if (myMsg > generateNbr)
+        showMsg.value = "C'est moins !";
+
     testNbr++;
+    
     if (myMsg == generateNbr) {
         showMsg.value = `Bien joué, en ${testNbr} coups`;
         document.getElementById('tryAgainBtn').style.display = "";
         document.getElementById('proposeBtn').style.display = "none";
-        console.log("gg");
     }
     myMsg = '';
     showMsg.innerHTML = myMsg;
