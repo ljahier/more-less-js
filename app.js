@@ -39,7 +39,7 @@ function launch() {
     }
     // reset value of myMsg variable and in the input in HTML
     myMsg = '';
-    showMsg.value = myMsg;
+    showMsg.innerHTML = myMsg;
 }
 
 // tryAgain function is to reload web page to restart the game
