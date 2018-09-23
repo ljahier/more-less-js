@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Plus ou moins</title>
+    	<title>More or less game</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="gamepad.png">
     </head>
     <body>
-        <h1>Bienvenue sur le jeu du Plus ou Moins</h1>
+        <h1>Welcome to more or less game</h1>
         <div class="container" id="container">
-            <div class="col-left">
+            <div class="pad">
+                <input type="text" class="showMsg" id="showMsg" value="Suggest a number between 0 and 100">
                 <script>
                     for (let i = 1; i <= 9; i++) {
                         document.write(`<button type="button" class="padNbr" value="${i}" onclick="addNbr(${i})" >${i}</button>`)
                     }
                 </script>
                 <button type="button" class="padNbr" value="0" onclick="addNbr('0')" >0</button>
-                <button type="button" class="padNbr" onclick="emptyNbr()" id="emptyNbr" style="width: 175px;">Supprimer</button>
-                <br>
-                <button type="button" class="padNbr" id="proposeBtn" onclick="launch()" style="width: 280px">Proposer</button>
-                <button type="button" class="padNbr" onclick="tryAgain()" id="tryAgainBtn" style="display: none; width: 280px">Recommencer</button>
-                
-            </div>
-            <div class="col-right">
-		        <input type="text" class="showMsg" id="showMsg" value="Proposez un nombre compris entre 0 et 100 !">
+                <button type="button" class="padNbr" onclick="emptyNbr()" id="emptyNbr" style="width: 175px;">Delete</button>
+                <button type="button" class="padNbr" id="toProposeBtn" onclick="launch()" style="width: 280px">To Propose</button>
+                <button type="button" class="padNbr" onclick="tryAgain()" id="tryAgainBtn" style="display: none; width: 280px">Try again</button>
+
             </div>
         </div>
 
         <div class="footer">
-            <p>Développé avec <img src="heart.png" width="15px" alt="love"> par Pierre & Lucas</p>
+            <p>Made with ❤️ by Pierre & Lucas</p>
         </div>
-        
         <script src="app.js"></script>
     </body>
 </html>

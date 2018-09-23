@@ -14,28 +14,28 @@ function addNbr(myValue) {
     showMsg.value = myMsg;
 }
 
-// launch function start when the people click on "Proposer" button
+// launch function start when the people click on "To Propose" button
 function launch() {
     // This condition is to test if myMsg value is less than generateNbr
     if (myMsg < generateNbr)
         // change value in the html with the myMsg value
-        showMsg.value = "C'est plus !";
-    
+        showMsg.value = "It's more !";
+
     // This condition is to test if myMsg value is more than generateNbr
     if (myMsg > generateNbr)
         // change value in the html with the myMsg value
-        showMsg.value = "C'est moins !";
+        showMsg.value = "It's less !";
     // add 1 time to testNbr value
     testNbr++;
 
     // This condition is to test if myMsg value is equals to generateNbr
     if (myMsg == generateNbr) {
         // change value in the html with the myMsg value
-        showMsg.value = `Bien joué, en ${testNbr} coups`;
+        showMsg.value = `Good game, you have try ${testNbr} time`;
         // change the style to tryAgainBtn to show it
         document.getElementById('tryAgainBtn').style.display = "";
         // change the style to tryAgainBtn to hide it
-        document.getElementById('proposeBtn').style.display = "none";
+        document.getElementById('toProposeBtn').style.display = "none";
     }
     // reset value of myMsg variable and in the input in HTML
     myMsg = '';

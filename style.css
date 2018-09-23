@@ -2,20 +2,16 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: #646464
+    color: #646464;
 }
 
 .container {
     display: flex;
 }
 
-.col-left {
+.pad {
     align-items: flex-start;
     width: 300px;
-}
-
-.col-right {
-    align-items: flex-end;
 }
 
 .padNbr {
